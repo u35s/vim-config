@@ -1,3 +1,4 @@
+![Build Status](https://ci.appveyor.com/api/projects/status/github/vic2016/vim-config?branch=master&svg=true)
 vim 配置
 ====
 vim plugin 
