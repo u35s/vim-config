@@ -2,7 +2,7 @@ vim 配置
 ====
 vim plugin 
 ____
-1.git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+1. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 golang config
 ____
