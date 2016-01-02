@@ -1,5 +1,8 @@
 vim 配置
 ====
+vim plugin 
+____
+1.git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 golang config
 ____
 1. 添加 Plugin 'fatih/vim-go'
