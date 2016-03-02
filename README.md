@@ -9,6 +9,7 @@ ____
 1. 添加 Plugin 'fatih/vim-go'
 2. 执行插件安装 `:PluginInstall`
 3. 安装binaries `:GoInstallBinaries`
+
 vim无插件命令
 ====
 字符相关
