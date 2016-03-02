@@ -9,6 +9,7 @@ ____
 1. 添加 Plugin 'fatih/vim-go'
 2. 执行插件安装 `:PluginInstall`
 3. 安装binaries `:GoInstallBinaries`
+
 vim无插件命令
 ====
 字符相关
@@ -29,3 +30,7 @@ ____
 ____
 * `^`行首
 * `$`行末
+
+替换
+____
+* `:%s/word/word/gc` 全局替换并确认 
