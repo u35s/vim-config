@@ -1,6 +1,7 @@
 "[vim2016] vim plugin manage:vundle 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+syntax on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -29,7 +30,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " All of your Plugins must be added before the following line
 Plugin 'fatih/vim-go'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
@@ -79,3 +80,5 @@ let g:tagbar_type_go = {
 set number  "show line
 set autoindent 
 set ts=4 
+set clipboard=unnamed
+set hlsearch
