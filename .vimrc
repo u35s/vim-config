@@ -1,4 +1,4 @@
-"[vim2016] vim plugin manage:vundle 
+"[vim2017] vim plugin manage:vundle 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
@@ -33,6 +33,11 @@ Plugin 'fatih/vim-go'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'majutsushi/tagbar'
+Plugin 'wincent/command-t'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'yianwillis/vimcdoc'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -49,6 +54,7 @@ filetype plugin indent on    " required
 "[vic2016] vim golang setting
 au BufWritePost *.go :GoImports "文件写入时自动倒入包
 nmap <F8> :TagbarToggle<CR>
+nmap ct  :CommandT<CR>
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -82,3 +88,5 @@ set autoindent
 set ts=4 
 set clipboard=unnamed
 set hlsearch
+set fileformat=mac
+let g:airline#extensions#tabline#enabled = 1
