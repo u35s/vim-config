@@ -90,3 +90,9 @@ set clipboard=unnamed
 set hlsearch
 set fileformat=mac
 let g:airline#extensions#tabline#enabled = 1
+"vim替换字符串为递增数字
+let g:I=0
+function! INC(increment)
+let g:I =g:I + a:increment
+return g:I
+endfunction
