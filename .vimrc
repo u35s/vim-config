@@ -30,6 +30,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " All of your Plugins must be added before the following line
 Plugin 'fatih/vim-go'
+Plugin 'fatih/molokai'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'majutsushi/tagbar'
@@ -96,3 +97,4 @@ function! INC(increment)
 let g:I =g:I + a:increment
 return g:I
 endfunction
+colorscheme molokai
