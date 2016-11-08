@@ -53,7 +53,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "[vic2016] vim golang setting
-au BufWritePost *.go :GoImports "文件写入时自动倒入包
+"au BufWritePost *.go :GoImports "文件写入时自动倒入包
+let g:go_fmt_command = "goimports"
 nmap <F8> :TagbarToggle<CR>
 nmap ct  :CommandT<CR>
 let g:tagbar_type_go = {
