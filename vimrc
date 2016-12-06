@@ -87,10 +87,21 @@ function! Inc(increment)
 endfunction
 "折叠
 au CursorMoved *.go :call MeFold()
+let g:MeFoldLastLine = 0
 function! MeFold()
 	let s:start = foldclosed(".") 
-	let s:end = foldclosedend(".")
+	if s:start == g:MeFoldLastLine
+		return		
+	endif
+	"let s:end = foldclosedend(".")
 	if s:start > 0
 		:foldopen!
 	endif
+	let g:MeFoldLastLine = s:start
 endfunction
+"git 快捷键
+nmap gb  :Gblame<CR>
+nmap gs  :Gstatus<CR>
+nmap gf  :Gdiff<CR>
+nmap gpl  :Gpull<CR>
+nmap gps  :Gpush<CR>
