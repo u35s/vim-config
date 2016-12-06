@@ -23,12 +23,14 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'othree/xml.vim'
 Plugin 'yianwillis/vimcdoc'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "[vic2016] vim golang setting
 "au BufWritePost *.go :GoImports "文件写入时自动倒入包
 let g:go_fmt_command = "goimports"
 nmap <F8> :TagbarToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
 nmap ct  :CommandT<CR>
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
