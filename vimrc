@@ -29,8 +29,8 @@ filetype plugin indent on    " required
 "[vic2016] vim golang setting
 "au BufWritePost *.go :GoImports "文件写入时自动倒入包
 let g:go_fmt_command = "goimports"
-nmap <F8> :TagbarToggle<CR>
-nmap <F7> :NERDTreeToggle<CR>
+nmap tg :TagbarToggle<CR>
+nmap tr :NERDTreeToggle<CR>
 nmap ct  :CommandT<CR>
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -69,6 +69,7 @@ set clipboard=unnamed
 set hlsearch
 set fileformat=mac
 set ignorecase
+set foldmethod=syntax
 "插件设置
 let g:rehash256 = 1
 let g:molokai_original = 1
@@ -83,4 +84,13 @@ let g:I=0
 function! Inc(increment)
 	let g:I =g:I + a:increment
 	return g:I
+endfunction
+"折叠
+au CursorMoved *.go :call MeFold()
+function! MeFold()
+	let s:start = foldclosed(".") 
+	let s:end = foldclosedend(".")
+	if s:start > 0
+		:foldopen!
+	endif
 endfunction
