@@ -24,6 +24,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'othree/xml.vim'
 Plugin 'yianwillis/vimcdoc'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "[vic2016] vim golang setting
@@ -69,7 +71,7 @@ set clipboard=unnamed
 set hlsearch
 set fileformat=mac
 set ignorecase
-set foldmethod=syntax
+"set foldmethod=syntax
 "插件设置
 let g:rehash256 = 1
 let g:molokai_original = 1
@@ -105,3 +107,14 @@ nmap gs  :Gstatus<CR>
 nmap gf  :Gdiff<CR>
 nmap gpl  :Gpull<CR>
 nmap gps  :Gpush<CR>
+nmap gm  :Gcommit<CR>
+"neosnippet
+let g:go_snippet_engine = "neosnippet"
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
