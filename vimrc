@@ -26,6 +26,7 @@ Plugin 'yianwillis/vimcdoc'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
+Plugin 'http://192.168.1.201:3000/zjt/uye-snippet.git'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "[vic2016] vim golang setting
@@ -110,11 +111,12 @@ nmap gps  :Gpush<CR>
 nmap gm  :Gcommit<CR>
 "neosnippet
 let g:go_snippet_engine = "neosnippet"
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap cd     <Plug>(neosnippet_expand_or_jump)
+smap cd     <Plug>(neosnippet_expand_or_jump)
+xmap cd     <Plug>(neosnippet_expand_target)
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
